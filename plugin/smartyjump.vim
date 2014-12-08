@@ -10,7 +10,7 @@
 
 function! SmartyJump()
   let current_path = expand("%:p")
-  let tpl_path = '/tpl/' . expand("<cfile>")
+  let tpl_path = '/template/' . expand("<cfile>")
   let include_file_path = substitute(current_path, '/*/\<tpl/.*', tpl_path, '')
   if filereadable(include_file_path)
     execute 'edit ' . include_file_path
